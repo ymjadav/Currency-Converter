@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Currency Converter</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link href="style.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -13,56 +13,36 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body
-    class="m-0 p-0 flex items-center m-1 justify-center min-h-screen mt-4 bg-blue-300"
-  >
-    <div class="container bg-white p-8 rounded-md w-96 min-h-96">
-      <h1 class="font-bold text-2xl">Currency Converter</h1>
-      <form class="mt-8 mb-1">
+  <body>
+    <div class="container">
+      <h2>Currency Converter</h2>
+      <form>
         <div class="amount">
           <p>Enter Amount</p>
-          <input
-            value="100"
-            type="text"
-            class="w-full outline-none border border-solid text-base h-12 pl-2 rounded"
-          />
+          <input value="1" type="text" />
         </div>
-        <div class="dropdown flex justify-between items-center mt-8">
+        <div class="dropdown">
           <div class="from">
             <p>From</p>
-            <div
-              class="select-container flex justify-center items-center w-32 border border-balck rounded-lg border-solid"
-            >
-              <img src="https://flagsapi.com/US/flat/64.png" class="max-w-8" />
-              <select
-                name="from"
-                class="w-auto text-base border-none outline-none rounded-xl focus:ring-0"
-              ></select>
+            <div class="select-container">
+              <img src="https://flagsapi.com/US/flat/64.png" />
+              <select name="from"></select>
             </div>
           </div>
-          <i class="fa-solid fa-arrow-right-arrow-left text-2xl mt-6"></i>
+          <i class="fa-solid fa-arrow-right-arrow-left"></i>
           <div class="to">
             <p>To</p>
-            <div
-              class="select-container flex justify-center items-center text-xs w-32 border border-balck rounded-md"
-            >
-              <img src="https://flagsapi.com/IN/flat/64.png" class="max-w-8" />
-              <select
-                name="to"
-                class="w-auto text-base border-none focus:outline-none focus:ring-0 rounded-xl"
-              ></select>
+            <div class="select-container">
+              <img src="https://flagsapi.com/IN/flat/64.png" />
+              <select name="to"></select>
             </div>
           </div>
         </div>
-        <div class="msg mt-8 mb-8">1USD = 80INR</div>
-        <button
-          type="button"
-          class="h-12 bg-violet-500 text-white text-xl rounded-md shadow-md w-full"
-        >
-          Get Exchange Rate
-        </button>
+        <div class="msg">1USD = 80INR</div>
+        <button>Get Exchange Rate</button>
       </form>
     </div>
+    <script src="country-name-code.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
