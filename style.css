@@ -70,10 +70,12 @@ form input {
 }
 
 .msg {
-  margin: 2rem 0 2rem 0;
+  margin-top: 1rem;
+  font-size: large;
 }
 
 form button {
+  margin-top: 2rem;
   height: 3rem;
   background-color: #af4d98;
   color: #fff;
